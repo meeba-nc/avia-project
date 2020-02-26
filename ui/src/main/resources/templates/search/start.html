@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Welcome to Aviato!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="../../static/css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class ="ylw-stripe"></div>
+            <div class ="blu-stripe"></div>
+            <div class ="logo-container">
+                <img th:src="@{/static/img/circle-with-plane.png}" width="100" height="100" alt="logo"/>
+                <h1>Welcome to Aviato!</h1>
+            </div>
+        </header>
+        <main>
+            <div class="inside-main">
+                <form name="main-form" class="main-form" action="/search/result" method="POST">
+                    <div class="input-container">
+                        <label for="input-from">From</label>
+                        <input type="text" id="input-from" name="input-from">
+                    </div>
+                    <div class="input-container">
+                        <label for="input-to">To</label>
+                        <input type="text" id="input-to" name="input-to">
+                    </div>
+                    <div class="input-container">
+                        <label for="input-when">When</label>
+                        <input type="text" id="input-when" name="input-when">
+                    </div>
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class ="blc-stripe">&#169; 2020 Netcracker</div>
+        </footer>
+    </body>
+</html>
